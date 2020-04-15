@@ -52,7 +52,7 @@ public class Calculator extends javax.swing.JFrame {
         btnKali = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         labelOperator = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnMinus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Kalkulator");
@@ -186,10 +186,10 @@ public class Calculator extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("KALKULATOR");
 
-        jButton2.setText("+/-");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnMinus.setText("+/-");
+        btnMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnMinusActionPerformed(evt);
             }
         });
 
@@ -233,7 +233,7 @@ public class Calculator extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(btnKoma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(btnHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
@@ -290,7 +290,7 @@ public class Calculator extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnNol, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnKoma, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(btnHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
@@ -468,7 +468,7 @@ public class Calculator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnHasilActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
         // TODO add your handling code here:
         try {
             double minus = Double.valueOf(txtTampil.getText()) * (-1);   
@@ -477,7 +477,7 @@ public class Calculator extends javax.swing.JFrame {
         catch(NumberFormatException e) {
             txtTampil.setText("");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnMinusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -526,6 +526,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton btnKoma;
     private javax.swing.JButton btnKurang;
     private javax.swing.JButton btnLima;
+    private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnNol;
     private javax.swing.JButton btnSatu;
     private javax.swing.JButton btnSembilan;
@@ -533,7 +534,6 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnTiga;
     private javax.swing.JButton btnTujuh;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelOperator;
     private javax.swing.JTextField txtTampil;
